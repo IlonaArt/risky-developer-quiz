@@ -5,9 +5,9 @@ import {
 
 function StartPage() {
   return (
-    <div>
+    <div className="container">
       <h1 className="heading">Насколько Вы рисковый разработчик?</h1>
-      <Link className="primary-link" to="/question/1">Начать тест!</Link>
+      <Link className="primary-link centered" to="/question/1">Начать тест!</Link>
     </div>
   )
 }
