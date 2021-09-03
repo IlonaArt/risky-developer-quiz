@@ -31,19 +31,57 @@ h1 {
   text-align: center;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
 .answers {
   display: flex;
   flex-direction: column;
+  padding-left: 0;
+  list-style: none;
+  text-align: initial;
+  margin-bottom: 33px;
+}
+
+.answer:not(:last-child) {
+  margin-bottom: 8px;
 }
 
 .primary-link {
   display: block;
+  font-weight: 600;
+  text-decoration: overline;
+  font-size: 20px;
+  text-align: left;
+  transition: .2s ease color;
+}
+
+.primary-link:hover {
+  color: #d41b1b;
+}
+
+.primary-link.back {
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.primary-link.back:hover {
+  color: #ad0cfd;
 }
 
 .centered {
   text-align: center;
 }
 
-.container {
-  padding-top: 76px;
+.question {
+  font-size: 20px;
+}
+
+.result .primary-link {
+  text-align: center;
+  margin-top: 30px;
 }

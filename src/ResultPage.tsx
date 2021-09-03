@@ -28,11 +28,11 @@ function ResultPage() {
   const total = store.getResult();
 
   return (
-    <>
+    <div className="result">
       <div>Вы набрали {total} {declention(total, ['балл', 'балла', 'баллов'])}</div>
       <p>{getResultText(total)}</p>
       <Link className="primary-link" to="/question/:id">Пройти заново</Link>
-    </>
+    </div>
   )
 }
 
