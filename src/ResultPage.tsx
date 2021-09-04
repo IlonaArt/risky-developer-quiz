@@ -31,7 +31,7 @@ function ResultPage() {
     <div className="result">
       <div>Вы набрали {total} {declention(total, ['балл', 'балла', 'баллов'])}</div>
       <p>{getResultText(total)}</p>
-      <Link className="primary-link" to="/question/:id">Пройти заново</Link>
+      <Link className="primary-link" to="/question/1">Пройти заново</Link>
     </div>
   )
 }

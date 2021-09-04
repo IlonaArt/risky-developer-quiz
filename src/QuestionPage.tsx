@@ -14,6 +14,8 @@ function QuestionPage() {
   const { id } = useParams<QuestionPageParams>();
   const question = store.questions[+id - 1];
   const [userAnswer, setUserAnswer] = useState<string>();
+
+  const previousAnswer = store.userAnswers.find((answer) => +id === answer[0]);
   return (
     <div>
       <div className="question">{id}. {question.text}</div>
@@ -21,7 +23,13 @@ function QuestionPage() {
         {Object.entries(question.answers).map(([key, answer]) => (
           <li className="answer" key={answer}>
             <label>
-              <input type="radio" value={key} name="variant" onChange={(event) => setUserAnswer(event.target.value)} />
+              <input
+                type="radio"
+                value={key}
+                name="variant"
+                onChange={(event) => setUserAnswer(event.target.value)}
+                defaultChecked={previousAnswer !== undefined && previousAnswer[1] === key}
+              />
               {answer}
             </label>
           </li>
